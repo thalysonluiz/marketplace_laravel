@@ -29,4 +29,12 @@ class StoreRequest extends FormRequest
             'phone'         => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            // 'required'  => 'O campo :attribute é obrigatório',
+            // 'min'       => 'O campo :attribute deve ter no mínimo :min caracteres',
+        ];
+    }
 }
