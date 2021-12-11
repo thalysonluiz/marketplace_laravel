@@ -28,7 +28,7 @@
                       active
                   @endif" href="{{route('admin.products.index')}}">Produtos</a>
                 </li>
-                <li class="nav-item dropdown">
+                <!--<li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Dropdown
                   </a>
@@ -41,7 +41,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link disabled">Disabled</a>
-                </li>
+                </li>-->
               </ul>
               <div class="d-flex">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -50,6 +50,9 @@
                       <form action="{{route('logout')}}" method="POST" style="display: none" class="logout">
                           @csrf
                       </form>
+                    </li>
+                    <li class="nav-item">
+                      <span class="nav-link">{{auth()->user()->name}}</span>
                     </li>
                   </ul>
               </div>
