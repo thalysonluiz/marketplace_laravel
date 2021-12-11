@@ -50,8 +50,8 @@ class ProductController extends Controller
     {
         $data = $request->all();
 
-        $store = \App\Store::find($data['store']);
-        $product = $store->products()->create($data);
+        $store = auth()->user()->store; //\App\Store::find($data['store']);
+        $store->products()->create($data);
 
         flash('Produto criado com sucesso!')->success();
         return redirect()->route('admin.products.index');
