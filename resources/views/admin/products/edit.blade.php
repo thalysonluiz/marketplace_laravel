@@ -6,19 +6,39 @@
     @method('PUT') {{-- <input type="hidden" name="_method" value="PUT"> --}}
     <div class="form-group">
         <label>Nome Produto:</label>
-        <input type="text" name="name" id="" class="form-control" value="{{$product->name}}">
+        <input type="text" name="name" id="" class="form-control @error('name') is-invalid @enderror" value="{{$product->name}}">
+        @error('name')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+        @enderror
     </div>
     <div class="form-group">
         <label>Descrição</label>
-        <input type="text" name="description" id="" class="form-control" value="{{$product->description}}">
+        <input type="text" name="description" id="" class="form-control @error('description') is-invalid @enderror" value="{{$product->description}}">
+        @error('name')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+        @enderror
     </div>
     <div class="form-group">
         <label>Conteudo</label>
-        <textarea name="body" id="" cols="30" rows="5" class="form-control">{{$product->body}}</textarea>
+        <textarea name="body" id="" cols="30" rows="5" class="form-control @error('body') is-invalid @enderror">{{$product->body}}</textarea>
+        @error('name')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+        @enderror
     </div>
     <div class="form-group">
         <label>Preço</label>
-        <input type="text" name="price" id="" class="form-control" value="{{$product->price}}">
+        <input type="text" name="price" id="" class="form-control @error('price') is-invalid @enderror" value="{{$product->price}}">
+        @error('name')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+        @enderror
     </div>
     <div class="form-group">
         <label>Slug</label>

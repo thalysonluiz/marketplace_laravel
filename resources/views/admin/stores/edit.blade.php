@@ -5,15 +5,30 @@
         <input type="hidden" name="_token" value="{{csrf_token()}}">
     <div class="form-group">
         <label>Nome Loja:</label>
-        <input type="text" name="name" id="" class="form-control" value="{{$store->name}}">
+        <input type="text" name="name" id="" class="form-control @error('name') is-invalid @enderror" value="{{$store->name}}">
+        @error('name')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+        @enderror
     </div>
     <div class="form-group">
         <label>Descrição</label>
-        <input type="text" name="description" id="" class="form-control" value="{{$store->description}}">
+        <input type="text" name="description" id="" class="form-control @error('description') is-invalid @enderror" value="{{$store->description}}">
+        @error('description')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+        @enderror
     </div>
     <div class="form-group">
         <label>Telefone</label>
-        <input type="text" name="phone" id="" class="form-control" value="{{$store->phone}}">
+        <input type="text" name="phone" id="" class="form-control @error('phone') is-invalid @enderror" value="{{$store->phone}}">
+        @error('phone')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+        @enderror
     </div>
     <div class="form-group">
         <label>Slug</label>
