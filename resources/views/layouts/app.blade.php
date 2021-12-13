@@ -28,6 +28,11 @@
                       active
                   @endif" href="{{route('admin.products.index')}}">Produtos</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link @if (request()->is('admin/categories*'))
+                      active
+                  @endif" href="{{route('admin.categories.index')}}">Categorias</a>
+                </li>
                 <!--<li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Dropdown
