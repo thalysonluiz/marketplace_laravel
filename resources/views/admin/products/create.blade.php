@@ -40,6 +40,14 @@
             @enderror
         </div>
         <div class="form-group">
+            <label for="categories">Categorias</label>
+            <select name="categories[]" id="" class="form-control" multiple>
+                @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             <label>Slug</label>
             <input type="text" name="slug" id="" class="form-control">
         </div>

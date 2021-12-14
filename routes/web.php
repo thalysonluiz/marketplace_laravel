@@ -74,7 +74,7 @@ Route::get('/model', function () {
 
     // return \App\Category::all();
 
-    //Adicionar um produto a uma categoria e vixe-versa
+    //Adicionar um produto a uma categoria e vice-versa
     $product = \App\Product::find(11);
     $product->categories()->attach([1]); //sync([1, 2])
 
