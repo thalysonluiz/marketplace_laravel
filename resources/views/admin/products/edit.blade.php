@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <h1>Editar Produto</h1>
-<form action="{{route('admin.products.update', ['product' => $product->id])}}" method="post">
+<form action="{{route('admin.products.update', ['product' => $product->id])}}" method="post" enctype="multipart/form-data">
     @csrf {{-- <input type="hidden" name="_token" value="{{csrf_token()}}"> --}}
     @method('PUT') {{-- <input type="hidden" name="_method" value="PUT"> --}}
     <div class="form-group">
@@ -41,17 +41,21 @@
         @enderror
     </div>
     <div class="form-group">
-            <label for="categories">Categorias</label>
-            <select name="categories[]" id="" class="form-control" multiple>
-                @foreach ($categories as $category)
-                    <option value="{{$category->id}}"
-                    @if ($product->categories->contains($category))
-                      selected
-                    @endif
-                    >{{$category->name}}</option>
-                @endforeach
-            </select>
-        </div>
+      <label for="categories">Categorias</label>
+      <select name="categories[]" id="" class="form-control" multiple>
+        @foreach ($categories as $category)
+          <option value="{{$category->id}}"
+            @if ($product->categories->contains($category))
+              selected
+            @endif
+          >{{$category->name}}</option>
+        @endforeach
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="">Fotos do Produto</label>
+      <input type="file" class="form-control" name="photos[]" multiple>
+    </div>
     <div class="form-group">
         <label>Slug</label>
         <input type="text" name="slug" id="" class="form-control" value="{{$product->slug}}">
@@ -61,5 +65,15 @@
     </div>
     <button class="btn btn-primary" type="submit">Editar Produto</button>
 </form>
+
+<hr>
+
+<div class="row">
+  @foreach ($product->photos as $photo)
+    <div class="col-4">
+      <img src="{{asset('storage/'.$photo->image)}}" alt="" class="img-fluid">
+    </div>
+  @endforeach
+</div>
 
 @endsection
