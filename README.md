@@ -5,8 +5,8 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
   <img src="https://img.shields.io/github/languages/top/thalysonluiz/marketplace_laravel?labelColor=000000">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/thalysonluiz/marketplace_laravel?labelColor=000000">
-  ![GitHub last commit](https://img.shields.io/github/last-commit/thalysonluiz/marketplace_laravel?labelColor=000000)
-  ![GitHub package.json version](https://img.shields.io/github/package-json/v/thalysonluiz/marketplace_laravel?labelColor=000000)
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/thalysonluiz/marketplace_laravel?labelColor=000000">
+  <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/thalysonluiz/marketplace_laravel?labelColor=000000">
 </p>
 
 ## Marketplace Laravel
