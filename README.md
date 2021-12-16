@@ -1,12 +1,12 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=laravel&message=v7.x&color=red&labelColor=000000" alt="Laravel version" />
+  <img alt="Laravel version" src="https://img.shields.io/static/v1?label=laravel&message=v7.x&color=red&labelColor=000000" />
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
   <img src="https://img.shields.io/github/languages/top/thalysonluiz/marketplace_laravel?labelColor=000000">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/thalysonluiz/marketplace_laravel?labelColor=000000">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/thalysonluiz/marketplace_laravel?labelColor=000000">
-  <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/thalysonluiz/marketplace_laravel?labelColor=000000">
+  <img alt="Project version" src="https://img.shields.io/static/v1?label=version&message=v1.0.0&color=red&labelColor=000000" />
 </p>
 
 ## Marketplace Laravel
